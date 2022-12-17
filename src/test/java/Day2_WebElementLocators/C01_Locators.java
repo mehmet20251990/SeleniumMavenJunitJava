@@ -88,5 +88,38 @@ public class C01_Locators {
                 (By.xpath("//input[@name=\"session_key\"]"));
         email.sendKeys("RelataiveXpath konusu başarı ile tamamlandı...");
     }
+    @Test
+    public void multipleAttributeRelativeXpath(){
+        WebElement email = driver.findElement // AbasoluteXpath tavsiye edilmez, relativeXpath tavsiye edilir.
+                (By.xpath("//input[@name='session_key'][@type='text']"));
+        email.sendKeys("multipleAttributeRelataiveXpath konusu başarı ile tamamlandı...");
+    }
+    @Test
+    public void andOrRelativeXpath(){
+        WebElement email = driver.findElement
+                (By.xpath("//input[@name='session_key' and @type='text']"));
+                // (By.xpath("//input[@name='session_key' or @type='text']"));
+        email.sendKeys("multipleAttributeRelataiveXpath konusu başarı ile tamamlandı...");
+    }
+    @Test
+    public void containsRelativeXpath(){
+        WebElement email = driver.findElement
+                (By.xpath("//input[contains(@id,'key')]"));
+        email.sendKeys("containsRelataiveXpath konusu başarı ile tamamlandı...");
+    }
+    @Test
+    public void startsWithRelativeXpath(){
+        WebElement email = driver.findElement
+                (By.xpath("//input[starts-with(@id,'session')]"));
+        email.sendKeys("startsWithRelataiveXpath konusu başarı ile tamamlandı...");
+    }
+    @Test
+    public void textRelativeXpath(){
+        WebElement email = driver.findElement
+                (By.xpath("//button[contains(text(),'açın')]")); // //button[contains(.,'açın')]
+        // "text()" yerine "." yazarsak bu da tag'deki textlerin içine bakar ama "text()" sadece button tag'inin olduğu
+        // yere bakarken "." alt class'lara da bakar...
+        email.sendKeys("startsWithRelataiveXpath konusu başarı ile tamamlandı...");
+    }
 
 }
