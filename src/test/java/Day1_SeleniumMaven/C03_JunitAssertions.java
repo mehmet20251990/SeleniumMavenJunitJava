@@ -5,7 +5,10 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class C03_JunitAssertions {
@@ -19,6 +22,7 @@ public class C03_JunitAssertions {
     public void before(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
     @After
     public void after(){
@@ -30,7 +34,7 @@ public class C03_JunitAssertions {
         String url = driver.getCurrentUrl();
 
         // Mesaj, TEST FAILED olursa çalışır...
-        Assert.assertTrue("URL Amazon içermiyor", url.contains("Amazon"));
+        Assert.assertTrue("URL Amazon içermiyor", url.contains("amazon"));
     }
     @Test
     public void assertionTitleTest(){
@@ -39,6 +43,27 @@ public class C03_JunitAssertions {
 
         // Mesaj, TEST FAILED olursa çalışır...
         Assert.assertFalse("Title Facebook içermiyor", title.contains("Facebook"));
+    }
+    @Test
+    public void logoTest(){
+        driver.get("https://www.amazon.com");
+
+        WebElement logo = driver.findElement(By.id("nav-logo-sprites"));
+        Assert.assertTrue(logo.isDisplayed());
+    }
+    @Test //Extra
+    public void logoPositionTest(){
+        driver.get("https://www.amazon.com");
+
+        WebElement logo = driver.findElement(By.id("nav-logo-sprites"));
+        Point position = logo.getLocation();
+        System.out.println("position = " + position);
+
+        WebElement logo2 = driver.findElement(By.id("nav-logo"));
+        Point position2 = logo2.getLocation();
+        System.out.println("position2 = " + position2);
+
+        Assert.assertEquals("Tam köşede değil",position2,position);
     }
 
 }

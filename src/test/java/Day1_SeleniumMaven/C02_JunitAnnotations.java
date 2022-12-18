@@ -50,4 +50,6 @@ public class C02_JunitAnnotations {
     public static void afterAll(){
         System.out.println("Meth.ların sonrasındaki kod bloğu çalıştı...");
     }
+
+    // BeforeClass ve AfterClass tüm classı çalıştıracağı için mutlaka statik olmalı...!!!
 }
