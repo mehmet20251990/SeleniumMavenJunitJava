@@ -14,6 +14,7 @@ import org.openqa.selenium.support.locators.RelativeLocator;
 import java.time.Duration;
 
 public class C01_RelativeLocator {
+
 // Go to http://www.bestbuy.com
 // Verify that the page title contains "Best" Also, using Relative Locator.
 // LogoTest  Verify if the BestBuy logo is displayed.
@@ -47,5 +48,4 @@ public class C01_RelativeLocator {
         WebElement logoFlag = driver.findElement(logoFlagLocator);
         Assert.assertTrue("Logo görünmüyor",logoFlag.isDisplayed());
     }
-
 }
