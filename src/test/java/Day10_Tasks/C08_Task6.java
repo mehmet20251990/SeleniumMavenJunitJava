@@ -15,7 +15,6 @@ public class C08_Task6 extends BaseTest {
    */
     @Test
     public void test(){
-
         driver.get("https://demoqa.com/droppable");
 
         Actions actions = new Actions(driver);

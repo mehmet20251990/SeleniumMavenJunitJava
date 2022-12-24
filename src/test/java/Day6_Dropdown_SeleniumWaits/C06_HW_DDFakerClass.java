@@ -1,8 +1,10 @@
 package Day6_Dropdown_SeleniumWaits;
 
 import com.github.javafaker.Faker;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -53,22 +55,29 @@ public class C06_HW_DDFakerClass extends BaseTest {
         Actions act = new Actions(driver);
 
         act.click(inputs.get(0)).sendKeys(faker.name().firstName()).perform();
-        act.click(inputs.get(1)).sendKeys((CharSequence) faker.idNumber()).perform();////
+        act.click(inputs.get(1)).sendKeys(faker.idNumber().valid()).perform();
 
-        Select status = new Select(inputs.get(2));
-        status.selectByIndex(2);
+        act.click(inputs.get(2)).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+        //Select status = new Select(driver.findElement(By.xpath("//div[@class='oxd-select-text-input'][1]")));
+        //status.selectByIndex(2);
 
-        Select include = new Select(inputs.get(3));
-        include.selectByVisibleText("Current and Past Employees");
+        act.click(inputs.get(3)).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+        //Select include = new Select(inputs.get(3));
+        //include.selectByVisibleText("Current and Past Employees");
 
-        inputs.get(4).sendKeys(faker.name().firstName());
+        act.click(inputs.get(4)).sendKeys(faker.name().firstName()).perform();
 
-        Select job = new Select(inputs.get(5));
-        job.selectByValue("IT Manager");
+        act.click(inputs.get(5)).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+        //Select job = new Select(inputs.get(5));
+        //job.selectByValue("IT Manager");
 
-        Select sUnit = new Select(inputs.get(6));
-        job.selectByValue("3");
+        act.click(inputs.get(6)).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
+        //Select sUnit = new Select(inputs.get(6));
+        //sUnit.selectByValue("3");
 
         driver.findElement(By.xpath("//button[@type='submit']")).click();
+
+        WebElement recordText = driver.findElement(By.xpath("(//span[@class='oxd-text oxd-text--span'])[1]"));
+        Assert.assertTrue(recordText.isDisplayed());
     }
 }
