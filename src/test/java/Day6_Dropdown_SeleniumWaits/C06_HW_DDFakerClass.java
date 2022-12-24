@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import utilities.BaseTest;
 
@@ -49,9 +50,10 @@ public class C06_HW_DDFakerClass extends BaseTest {
         List<WebElement> inputs = driver.findElements(By.xpath("//div[@class='oxd-grid-item oxd-grid-item--gutters']"));
         //Faker objesi oluşturuldu.Bilgiler faker objesi ile üretilerek girildi.
         Faker faker=new Faker();
+        Actions act = new Actions(driver);
 
-        inputs.get(0).sendKeys(faker.name().firstName());
-        inputs.get(1).sendKeys((CharSequence) faker.idNumber());
+        act.click(inputs.get(0)).sendKeys(faker.name().firstName()).perform();
+        act.click(inputs.get(1)).sendKeys((CharSequence) faker.idNumber()).perform();////
 
         Select status = new Select(inputs.get(2));
         status.selectByIndex(2);

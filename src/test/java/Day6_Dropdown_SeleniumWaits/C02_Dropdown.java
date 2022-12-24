@@ -90,8 +90,8 @@ public class C02_Dropdown {
         System.out.println(select.isMultiple());
 
         select.selectByValue("apple");
-        select.selectByVisibleText("Grape");
         select.selectByIndex(0);
+        select.selectByVisibleText("Grape");
 
         // Seçili olanlardan index'i en küçük olanını verir
         System.out.println(select.getFirstSelectedOption().getText());
