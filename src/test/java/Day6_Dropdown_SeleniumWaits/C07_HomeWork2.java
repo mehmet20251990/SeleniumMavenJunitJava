@@ -25,8 +25,7 @@ public class C07_HomeWork2 extends BaseTest {
         WebElement mS = driver.findElement(By.xpath("(//div[.='Select...'])[4]"));
 
         Select select = new Select(mS);
-        ////////////////////////////////////
-
+        //////////////////////////
 
     }
 }
