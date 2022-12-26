@@ -14,6 +14,11 @@ public class C09_HW_SGetMeth extends BaseTest {
     - multiple <select> elementini locate edin
     - getOptions(), getFirstSelectedOption(), getAllSelected() methodlarini kullanmak adina:
       * Farkli secimler yaparak methodlarinizi kullanin ve Assertion yapmayi unutmayin
+
+        Deselect all the options.
+        Select 'Opel' using the index and deselect the same using index.
+        Select 'Saab' using value and deselect the same using value.
+    Close the browser.
      */
 
     @Override
@@ -38,10 +43,15 @@ public class C09_HW_SGetMeth extends BaseTest {
         System.out.println(select.getFirstSelectedOption().getText());
 
         List<WebElement> selectedOptions = select.getAllSelectedOptions();
-
         for (WebElement option : selectedOptions){
-            System.out.println(option.getText());
+            System.out.print(option.getText()+", ");
         }
+
+        select.deselectAll();
+        select.selectByIndex(2);
+        select.deselectByIndex(2);
+        select.selectByValue("saab");
+        select.deselectByValue("saab");
 
     }
 }
