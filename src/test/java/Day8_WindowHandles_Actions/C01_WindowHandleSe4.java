@@ -10,9 +10,11 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class C01_WindowHandleSe4 extends BaseTest {
-
-    // https://testproject.io/
-    // https://blog.testproject.io/
+    /*
+    Go to URL: https://testproject.io/
+    Selenium’s 4 newWindow() method to open a new Window for TestProject’s Blog page.
+    https://blog.testproject.io/
+     */
     @Override
     public void tearDown() {
     }
@@ -20,10 +22,9 @@ public class C01_WindowHandleSe4 extends BaseTest {
     public void newWindow(){
         driver.get("https://testproject.io/");
 
-        driver.switchTo().newWindow(WindowType.WINDOW);
-        driver.get("https://blog.testproject.io/");
-
-        // driver.switchTo().newWindow(WindowType.WINDOW).get("https://blog.testproject.io/");
+        //driver.switchTo().newWindow(WindowType.WINDOW);
+        //driver.get("https://blog.testproject.io/");
+        driver.switchTo().newWindow(WindowType.WINDOW).get("https://blog.testproject.io/");
     }
     @Test
     public void newTab(){
@@ -34,7 +35,8 @@ public class C01_WindowHandleSe4 extends BaseTest {
         System.out.println(driver.getTitle());
 
         // driver.switchTo().newWindow(WindowType.TAB);
-        // driverget("https://www.amazon.com/");
+        // driver.get("https://www.amazon.com/");
+        // driver.switchTo().newWindow(WindowType.TAB).get("https://www.amazon.com/");
     }
     @Test
     public void handleWindows(){

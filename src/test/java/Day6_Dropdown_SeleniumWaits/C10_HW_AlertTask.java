@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import utilities.BaseTest;
 
-public class C10_HW_DDTask extends BaseTest {
+public class C10_HW_AlertTask extends BaseTest {
     /*
     Go to URL: http://demo.automationtesting.in/Alerts.html
     Click "Alert with OK" and click 'click the button to display an alert box:’
