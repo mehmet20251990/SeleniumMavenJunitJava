@@ -19,7 +19,7 @@ public class C01_Screenshots {
         driver.get("https://wwww.amazon.com/");
 
         File source = ((FirefoxDriver)driver).getFullPageScreenshotAs(OutputType.FILE);
-
+        // Sadece firefox da çalışır ve sayfanın scrolle en aşagısına kadar resmini alır...
         // test-output -> Screenshots -> screenshot.png
         FileUtils.copyFile(source, new File("test-output/Screenshots/AmazonFullPageScreenshot.png"));
     }
