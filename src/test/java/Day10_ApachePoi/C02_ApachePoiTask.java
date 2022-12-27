@@ -27,7 +27,6 @@ public class C02_ApachePoiTask extends BaseTest {
         String path = "src\\test\\java\\resources\\excelfile.xlsx";
 
         FileInputStream fileInputStream = new FileInputStream(path);
-
         Workbook workbook = WorkbookFactory.create(fileInputStream);
         Sheet sheet1 = workbook.getSheetAt(0);
 
