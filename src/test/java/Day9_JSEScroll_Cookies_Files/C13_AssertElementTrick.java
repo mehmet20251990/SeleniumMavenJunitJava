@@ -6,16 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.BaseTest;
 
-public class C10_FileUpload extends BaseTest {
-    /*
-    Go to URL: https://the-internet.herokuapp.com/upload
-    Find the path of the file that you want to upload.
-    Click on Upload button.
-    Verify the upload message.
-     */
-    @Override
-    public void tearDown() {
-    }
+import java.util.List;
+
+public class C13_AssertElementTrick extends BaseTest {
     @Test
     public void fileUpload() throws InterruptedException {
         driver.get("https://the-internet.herokuapp.com/upload");
@@ -28,12 +21,6 @@ public class C10_FileUpload extends BaseTest {
         WebElement uploadFile = driver.findElement(By.id("file-submit"));
         uploadFile.click();
 
-        // Upload edilme mesajinin goruntulendigini dogruluyoruz
-        WebElement uploadedMessage = driver.findElement(By.tagName("h3"));
-
-        Assert.assertTrue(uploadedMessage.isDisplayed());
-        Assert.assertEquals("File Uploaded!" ,uploadedMessage.getText());
-        /*
         //Upload edilme mesajinin goruntulenemeiği, No such elements hatasına karşı bu şekilde de yazılabilir...(TRİCK)
         List<WebElement> uploadedMessageList = driver.findElements(By.tagName("h3"));
 
@@ -43,6 +30,5 @@ public class C10_FileUpload extends BaseTest {
 
         Assert.assertTrue(uploadedMessage.isDisplayed());
         Assert.assertEquals("Mesaj Texti istenildiği gibi görüntülenemiyor","File Uploaded!" ,uploadedMessage.getText());
-         */
     }
 }
