@@ -15,6 +15,5 @@ public class C01_Log4jDemo {
         logger.warn("Warn");
         logger.error("Error");
         logger.fatal("Fatal");
-
     }
 }
