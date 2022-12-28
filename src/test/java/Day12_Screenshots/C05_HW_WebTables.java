@@ -20,9 +20,9 @@ public class C05_HW_WebTables extends BaseTest {
     @Override
     public void tearDown() {
     }
-
     @Test
     public void webTables() {
         driver.get("https://the-internet.herokuapp.com/tables");
+
     }
 }
