@@ -29,7 +29,7 @@ Save the screenshot with format 'screenshotname_yyyy-MM-dd_hh-mm-ss.png'
         String date = new SimpleDateFormat("yyyy-MM-dd_hh-mm-ss").format(new Date());
         String path = "test-output\\Screenshots\\oHRMPageScreenshot_" + date + ".png";
 
-        // Aldigimiz screenshot istedigimiz path e kaydediyoruz
+        // Aldigimiz screenshotı istedigimiz pathe kaydediyoruz
         FileHandler.copy(source, new File(path));
     }
 }
