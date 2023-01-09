@@ -39,30 +39,29 @@ public class C05_HW_WebTables extends BaseTest {
         List<WebElement> table1Rows = table1.findElements(By.xpath(".//tr"));
         List<WebElement> table2Rows = table1.findElements(By.xpath(".//tr"));
         System.out.println("-----------TABLE 1 --------------");
-        for (WebElement each:table1Rows) {
+        for (WebElement each : table1Rows) {
             System.out.println(each.getText());
         }
         System.out.println("-----------TABLE 2 --------------");
-        table2Rows.forEach(x-> System.out.println(x.getText()));
+        table2Rows.forEach(x -> System.out.println(x.getText()));
 
-        System.out.println(table1Rows.get(table1Rows.size()-1).getText());
-        System.out.println(table2Rows.get(table2Rows.size()-1).getText());
+        System.out.println(table1Rows.get(table1Rows.size() - 1).getText());
+        System.out.println(table2Rows.get(table2Rows.size() - 1).getText());
 
         List<WebElement> table1Clms = table1.findElements(By.xpath(".//td[5]"));
         List<WebElement> table2Clms = table1.findElements(By.xpath(".//td[5]"));
         System.out.println("-----------TABLE 1 --------------");
-        for (WebElement each:table1Clms) {
+        for (WebElement each : table1Clms) {
             System.out.println(each.getText());
         }
         System.out.println("-----------TABLE 2 --------------");
-        table2Clms.forEach(x-> System.out.println(x.getText()));
+        table2Clms.forEach(x -> System.out.println(x.getText()));
 
-
-
-
-
-
-
-
+        System.out.println("printData(3,4,\"table1\") = " + printData(3, 4, "table1"));
+    }
+    public String printData(int rowNumber , int columnNumber , String tableID){
+        WebElement table = driver.findElement(By.id(tableID));
+        WebElement dataRowColumn = table.findElement(By.xpath(".//tr["+rowNumber+"]//td[" + columnNumber + "]"));
+        return dataRowColumn.getText();
     }
 }
