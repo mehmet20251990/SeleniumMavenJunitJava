@@ -10,9 +10,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
-
 public class C02_Practice {
 //    Create the driver with BeforeClass and make it static inside the class.
 //    Go to http://www.google.com
@@ -65,5 +63,4 @@ public class C02_Practice {
         WebElement results = driver.findElement(By.id("result-stats"));
         System.out.println(results.getText());
     }
-
 }

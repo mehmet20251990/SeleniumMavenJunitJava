@@ -8,10 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 import java.util.List;
-
 public class C01_Locators {
     WebDriver driver;
     @Before
@@ -19,15 +17,12 @@ public class C01_Locators {
         //Driver olusturuldu
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-
         // Sayfanın yüklenmesi beklendi
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
         //LinkedIn sitesine gidildi
         driver.get("https://www.linkedin.com/");
         // driver imiz maximize edildi
         driver.manage().window().maximize();
-
     }
     @After
     public void tearDown(){
@@ -121,5 +116,4 @@ public class C01_Locators {
         // yere bakarken "." alt class'lara da bakar...
         email.sendKeys("startsWithRelataiveXpath konusu başarı ile tamamlandı...");
     }
-
 }

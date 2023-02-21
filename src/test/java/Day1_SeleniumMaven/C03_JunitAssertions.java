@@ -10,7 +10,6 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 public class C03_JunitAssertions {
 //    Go to Amazon homepage.
 //    Do the following tasks by creating 3 different test methods.
@@ -47,14 +46,12 @@ public class C03_JunitAssertions {
     @Test
     public void logoTest(){
         driver.get("https://www.amazon.com");
-
         WebElement logo = driver.findElement(By.id("nav-logo-sprites"));
         Assert.assertTrue(logo.isDisplayed());
     }
     @Test //Extra
     public void logoPositionTest(){
         driver.get("https://www.amazon.com");
-
         WebElement logo = driver.findElement(By.id("nav-logo-sprites"));
         Point position = logo.getLocation();
         System.out.println("position = " + position);
@@ -65,5 +62,4 @@ public class C03_JunitAssertions {
 
         Assert.assertEquals("Tam köşede değil",position2,position);
     }
-
 }

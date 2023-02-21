@@ -1,7 +1,6 @@
 package Day1_SeleniumMaven;
 
 import org.junit.*;
-
 public class C02_JunitAnnotations {
     // 1. test
     // 2. test

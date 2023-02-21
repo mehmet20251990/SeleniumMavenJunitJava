@@ -12,7 +12,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-
 public class C01_Practice {
 //    Go to https://www.linkedin.com/
 //    When we write an e-mail without the @ sign in the e-mail box and press enter.
@@ -46,7 +45,5 @@ public class C01_Practice {
         Assert.assertTrue(alertMessage.isDisplayed());
         // Assert.assertEquals(true,alertMessage.isDisplayed());
         // Assert.assertFalse(!alertMessage.isDisplayed());
-
     }
-
 }
