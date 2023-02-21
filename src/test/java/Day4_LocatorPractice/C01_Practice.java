@@ -7,9 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
-
 public class C01_Practice {
 //Navigate to website  https://testpages.herokuapp.com/styled/index.html
 // Under the ORIGINAL CONTENTS
@@ -60,11 +58,9 @@ public class C01_Practice {
 
         String basicAjaxUrl = driver.getCurrentUrl();
         System.out.println(basicAjaxUrl);
-
         driver.findElement(By.id("lteq30")).sendKeys("20"+ Keys.ENTER);
 
         WebElement submittedValuesText = driver.findElement(By.xpath("//p[.='Submitted Values']")); //text()
         Assert.assertTrue(submittedValuesText.isDisplayed());
     }
-
 }

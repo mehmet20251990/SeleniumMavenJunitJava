@@ -10,7 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-
 public class C04_PracticeHw2 {
 // Navigate to https://testpages.herokuapp.com/styled/index.html
 // Click on Calculate under Micro Apps.
@@ -19,7 +18,6 @@ public class C04_PracticeHw2 {
 // Click on Calculate.
 // Get the result.
 // Print the result.
-
     WebDriver driver;
     @Before
     public void setup(){

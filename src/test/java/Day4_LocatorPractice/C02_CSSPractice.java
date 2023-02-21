@@ -12,7 +12,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 import java.util.List;
-
 public class C02_CSSPractice {
 // http://the-internet.herokuapp.com/add_remove_elements/
 // Click on the "Add Element" button 100 times.
@@ -39,7 +38,6 @@ public class C02_CSSPractice {
         driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
         createElements(100);
         deleteButtonsAndValidate(50);
-
     }
     public void deleteButtonsAndValidate(int amount){
         List<WebElement> removeButtonList = driver.findElements(By.cssSelector("button[onclick='deleteElement()']"));

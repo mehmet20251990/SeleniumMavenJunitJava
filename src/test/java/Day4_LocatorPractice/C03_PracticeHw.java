@@ -11,7 +11,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-
 public class C03_PracticeHw {
 //https://id.heroku.com/login sayfasına gidiniz.
 //Bir mail adresi giriniz.
@@ -20,7 +19,6 @@ public class C03_PracticeHw {
 //"There was a problem with your login." text görünür ise "Kayıt Yapılamadı" yazdırınız.
 //Eğer yazı görünür değilse "Kayıt Yapıldı" yazdırınız.
 //Tüm sayfaları kapatınız.
-
     WebDriver driver;
     @Before
     public void setup(){
@@ -37,7 +35,6 @@ public class C03_PracticeHw {
 
         WebElement pswd = driver.findElement(By.id("password"));
         pswd.sendKeys("1234");
-
         driver.findElement(By.name("commit")).click();
 
         WebElement alert = driver.findElement(By.xpath("//div[@role='alert']"));
