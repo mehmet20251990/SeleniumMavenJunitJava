@@ -5,13 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.BaseTest;
-
 public class C03_Actions extends BaseTest {
-
     @Test
     public void dragAndDrop(){
         driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");
-
         // Drag Elements
         WebElement washington = driver.findElement(By.id("box3"));
         WebElement copenhagen = driver.findElement(By.id("box4"));
@@ -31,7 +28,6 @@ public class C03_Actions extends BaseTest {
         WebElement us = driver.findElement(By.id("box103"));
 
         Actions actions = new Actions(driver);
-
         actions.dragAndDrop(madrid, spain).perform();
         actions.dragAndDrop(copenhagen, denmark).perform();
         actions.dragAndDrop(oslo, norway)

@@ -6,9 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.BaseTest;
-
 public class C02_Actions extends BaseTest {
-
     @Test
     public void doubleClick(){
         driver.get("https://demoqa.com/buttons");
@@ -16,7 +14,6 @@ public class C02_Actions extends BaseTest {
 
         Actions actions = new Actions(driver);
         actions.doubleClick(dClickButton).perform();
-
         Assert.assertTrue(driver.findElement(By.id("doubleClickMessage")).isDisplayed());
     }
     @Test
@@ -26,7 +23,6 @@ public class C02_Actions extends BaseTest {
 
         Actions actions = new Actions(driver);
         actions.contextClick(rClickButton).perform();
-
         Assert.assertTrue(driver.findElement(By.id("rightClickMessage")).isDisplayed());
     }
     @Test

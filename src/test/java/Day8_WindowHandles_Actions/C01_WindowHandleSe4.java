@@ -8,7 +8,6 @@ import utilities.BaseTest;
 
 import java.util.Iterator;
 import java.util.Set;
-
 public class C01_WindowHandleSe4 extends BaseTest {
     /*
     Go to URL: https://testproject.io/
@@ -21,7 +20,6 @@ public class C01_WindowHandleSe4 extends BaseTest {
     @Test
     public void newWindow(){
         driver.get("https://testproject.io/");
-
         //driver.switchTo().newWindow(WindowType.WINDOW);
         //driver.get("https://blog.testproject.io/");
         driver.switchTo().newWindow(WindowType.WINDOW).get("https://blog.testproject.io/");
@@ -29,7 +27,6 @@ public class C01_WindowHandleSe4 extends BaseTest {
     @Test
     public void newTab(){
         driver.get("https://testproject.io/");
-
         WebDriver newTab = driver.switchTo().newWindow(WindowType.TAB);
         newTab.get("https://www.amazon.com/");
         System.out.println(driver.getTitle());
@@ -41,7 +38,6 @@ public class C01_WindowHandleSe4 extends BaseTest {
     @Test
     public void handleWindows(){
         driver.get("https://www.amazon.com/");
-
         String homePageHandle= driver.getWindowHandle();
 
         driver.switchTo().newWindow(WindowType.TAB);

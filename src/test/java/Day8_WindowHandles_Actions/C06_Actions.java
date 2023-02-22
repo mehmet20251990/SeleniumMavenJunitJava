@@ -6,9 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.BaseTest;
-
 public class C06_Actions extends BaseTest {
-
     @Test
     public void keyboardActions(){
         driver.get("https://demoqa.com/auto-complete");
