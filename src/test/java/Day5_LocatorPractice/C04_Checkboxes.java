@@ -12,9 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 import java.util.List;
-
 public class C04_Checkboxes {
-
 //    Go to https://the-internet.herokuapp.com/checkboxes
 //    Locate the elements of checkboxes.
 //    Then click on checkbox 1 if box is not selected.
@@ -35,7 +33,6 @@ public class C04_Checkboxes {
     @Test
     public void checkboxes() throws InterruptedException {
         driver.get("https://the-internet.herokuapp.com/checkboxes");
-
         WebElement checkbox1 = driver.findElement(By.xpath("(//input[@type='checkbox'])[1]"));
         WebElement checkbox2 = driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
 
@@ -51,7 +48,5 @@ public class C04_Checkboxes {
         }
         Assert.assertTrue(checkbox1.isSelected());
         Assert.assertTrue(checkbox2.isSelected());
-
-        Thread.sleep(3000);
     }
 }

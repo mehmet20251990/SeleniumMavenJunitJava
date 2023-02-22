@@ -11,9 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-
 public class C05_Checkboxes {
-
 //    Go to URL: https://demoqa.com/
 //    Click on Elements.
 //    Click on Checkbox.
@@ -34,7 +32,6 @@ public class C05_Checkboxes {
     @Test
     public void checkboxTest(){
         driver.get("https://demoqa.com/");
-
         WebElement CheckboxesHomework= driver.findElement(By.xpath("(//div[@class='card mt-4 top-card'])[1]"));
         CheckboxesHomework.click();
 
@@ -42,7 +39,6 @@ public class C05_Checkboxes {
         CheckboxesHomeworkButton.click();
 
         WebElement HomeworkCheckboxes=driver.findElement(By.xpath("//span[@class='rct-checkbox']"));
-
         Assert.assertTrue(HomeworkCheckboxes.isSelected());
     }
 }

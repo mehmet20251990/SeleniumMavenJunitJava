@@ -12,9 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 import java.util.List;
-
 public class C06_RadioButtons {
-
 //    Go to URL:  https://www.facebook.com/
 //    Click on Create an Account button.
 //    Then click on the radio buttons.
@@ -33,9 +31,7 @@ public class C06_RadioButtons {
     @Test
     public void radioButtons(){
         driver.get("https://www.facebook.com/");
-
         driver.findElement(By.xpath("//a[@data-testid='open-registration-form-button']")).click();
-
         /*
         List<WebElement> radioButtons = driver.findElements(By.name("sex"));
         WebElement rdBtn1 = radioButtons.get(0);
@@ -55,6 +51,5 @@ public class C06_RadioButtons {
         Assert.assertTrue(!rdBtn1.isSelected());
         Assert.assertTrue(!rdBtn3.isSelected());
         Assert.assertTrue(rdBtn2.isSelected());
-
     }
 }

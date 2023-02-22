@@ -11,9 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-
 public class C02_Task {
-
 // https://www.teknosa.com/ adresine gidiniz.
 // Arama çubuğuna ''oppo'’ yazıp ENTER tıklayınız.
 // Sonuç sayısını yazdırınız.
@@ -40,7 +38,6 @@ public class C02_Task {
     @Test
     public void teknosaTest() throws InterruptedException {
         driver.get("https://www.teknosa.com/");
-
         WebElement search = driver.findElement(By.id("search-input"));
         search.sendKeys("oppo"+ Keys.ENTER);
 
@@ -48,12 +45,10 @@ public class C02_Task {
         System.out.println("result= " +result.getText());
 
         driver.findElement(By.className("prd-link")).click();
-
         driver.findElement(By.xpath("(//button[@id='addToCartButton'])[1]")).click();
         // [1] -> xpath'lerin 0.indexi ya da 1. elemanı demek... Çoklu sonuçlarda kullanılır...
 
         driver.findElement(By.xpath("//a[@class='btn btn-secondary']")).click();
-
         WebElement ozet = driver.findElement(By.className("cart-sum-title"));
         System.out.println("Sipariş= " +ozet.getText());
 
