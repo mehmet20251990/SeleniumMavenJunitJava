@@ -5,7 +5,6 @@ import org.openqa.selenium.Cookie;
 import utilities.BaseTest;
 
 import java.util.Set;
-
 public class C06_HW_CookiesTest extends BaseTest {
     /*
     Go to URL: http://facebook.com
@@ -20,7 +19,6 @@ public class C06_HW_CookiesTest extends BaseTest {
     @Test
     public void cookiesTest() {
         driver.get("http://facebook.com");
-
         Set<Cookie> allCookies = driver.manage().getCookies();
         System.out.println("allCookies= " + allCookies.size());
 

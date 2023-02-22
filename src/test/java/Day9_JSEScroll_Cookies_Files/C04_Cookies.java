@@ -6,9 +6,7 @@ import org.openqa.selenium.Cookie;
 import utilities.BaseTest;
 
 import java.util.Set;
-
 public class C04_Cookies extends BaseTest {
-
     // Go to URL: https://kitchen.applitools.com/ingredients/cookie
     // Get Cookie.
     // Find the total number of cookies.
@@ -17,16 +15,12 @@ public class C04_Cookies extends BaseTest {
     // Edit Cookie.
     // Delete Cookie.
     // Delete All Cookies.
-
-
     @Override
     public void tearDown() {
     }
-
     @Test
     public void cookiesTest() {
         driver.get("http://kitchen.applitools.com/ingredients/cookie");
-
         System.out.println("test get cookies");
 
         Cookie cookie = driver.manage().getCookieNamed("protein");
@@ -42,7 +36,6 @@ public class C04_Cookies extends BaseTest {
             System.out.println("each cookie value= " + each.getValue());
         }
         System.out.println("add cookies");
-
         Cookie cookie1 = new Cookie("fruit", "banana");
         driver.manage().addCookie(cookie1);
         Assert.assertEquals(cookie1.getValue(),driver.manage().getCookieNamed(cookie1.getName()).getValue());
@@ -60,14 +53,12 @@ public class C04_Cookies extends BaseTest {
         allCookies = driver.manage().getCookies();
         System.out.println("allCookies= " + allCookies.size());
     }
-
     @Test
     public void deleteCookies() {
         driver.get("http://kitchen.applitools.com/ingredients/cookie");
         Set <Cookie> allCookies = driver.manage().getCookies();
         allCookies = driver.manage().getCookies();
         System.out.println("allCookies= " + allCookies.size());
-
         System.out.println("delete cookies");
 
         Cookie addedCookie = new Cookie("drinks", "ayran");
@@ -75,7 +66,6 @@ public class C04_Cookies extends BaseTest {
         driver.manage().deleteCookie(addedCookie);
 
         Assert.assertNull("cookie halen var",driver.manage().getCookieNamed(addedCookie.getName()));
-
         allCookies = driver.manage().getCookies();
         System.out.println("allCookies= " + allCookies.size());
 

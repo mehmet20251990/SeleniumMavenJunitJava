@@ -6,7 +6,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.BaseTest;
-
 public class C02_ScrolWithJSExecutor extends BaseTest {
      /*
             executeScript("window.scrollBy(x-piksel,y-piksel)");  ya da js.executeScript("scroll(x,y);");
@@ -29,9 +28,7 @@ public class C02_ScrolWithJSExecutor extends BaseTest {
     @Test
     public void doubleClickButton(){
         driver.get("https://api.jquery.com/dblclick/");
-
         driver.switchTo().frame(0);
-
         WebElement blueBox = driver.findElement(By.cssSelector("body>div"));
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -41,6 +38,5 @@ public class C02_ScrolWithJSExecutor extends BaseTest {
         Actions act = new Actions(driver);
         act.doubleClick(blueBox).perform();
         System.out.println("colour after= "+blueBox.getCssValue("background-color"));
-
     }
 }
