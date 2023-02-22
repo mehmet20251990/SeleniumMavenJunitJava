@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-
 public class C05_HW_WindHand extends BaseTest {
     /*
     Go to URL: https://demoqa.com/browser-windows
@@ -20,11 +19,9 @@ public class C05_HW_WindHand extends BaseTest {
     @Override
     public void tearDown() {
     }
-
     @Test
     public void wHandleTest() throws InterruptedException {
         driver.get("https://demoqa.com/browser-windows");
-
         String homePageId = driver.getWindowHandle();
         System.out.println("homePageId = " + homePageId);
 
@@ -35,7 +32,6 @@ public class C05_HW_WindHand extends BaseTest {
         Thread.sleep(2000);
 
         driver.findElement(By.id("messageWindowButton")).click();
-
         Set<String> links = driver.getWindowHandles();
         /*
         for (String link:links) {

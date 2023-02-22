@@ -7,7 +7,6 @@ import utilities.BaseTest;
 
 import java.util.List;
 import java.util.Set;
-
 public class C04_HWiFrame extends BaseTest {
     /*
     Go to URL: http://demo.guru99.com/test/guru99home/
@@ -21,10 +20,8 @@ public class C04_HWiFrame extends BaseTest {
     @Test
     public void iFrameTest() {
         driver.get("http://demo.guru99.com/test/guru99home/");
-
         List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
         System.out.println("iframes.size() = " + iframes.size());
-
         String homePageId = driver.getWindowHandle();
 
         driver.switchTo().frame("a077aa5e");

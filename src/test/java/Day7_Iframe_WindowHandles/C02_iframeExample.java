@@ -11,9 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 import java.util.List;
-
 public class C02_iframeExample {
-
 // https://www.jqueryscript.net/demo/Easy-iFrame-based-Twitter-Emoji-Picker-Plugin-jQuery-Emoojis/ sitesine gidiniz.
 // Web sitesini maximize yapınız.
 // İkinci emojiye tıklayınız.
@@ -37,7 +35,6 @@ public class C02_iframeExample {
     @Test
     public void iframeExample(){
         driver.get("https://www.jqueryscript.net/demo/Easy-iFrame-based-Twitter-Emoji-Picker-Plugin-jQuery-Emoojis/");
-
         driver.switchTo().frame("emoojis");
 
         WebElement secondTabEmoji = driver.findElement(By.xpath("//a[contains(@href,'nature')]"));
@@ -47,7 +44,6 @@ public class C02_iframeExample {
         emojiList.forEach(WebElement::click);
 
         driver.switchTo().defaultContent();
-
         //Form dolduruluyor
         WebElement text = driver.findElement(By.id("text"));
         text.sendKeys("Text");

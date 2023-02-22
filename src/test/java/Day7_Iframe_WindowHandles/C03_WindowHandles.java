@@ -8,23 +8,18 @@ import utilities.BaseTest;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-
 public class C03_WindowHandles extends BaseTest {
-
 //    Go to URL: https://www.toolsqa.com/selenium-webdriver/window-handle-in-selenium/
 //    Print the existing windowHandles ids by clicking all the links on the page.
 //    Click on the links that open a new page.
 //    Close other pages other than the home page.
 //    Set the driver back to the main page.
-
     @Override
     public void tearDown() {
     }
     @Test
     public void windowHandles(){
-
         driver.get("https://www.toolsqa.com/selenium-webdriver/window-handle-in-selenium/");
-
         //Daha sonra kullanabilmek adina ana sayfa id mizi sakliyoruz
         String homePageId = driver.getWindowHandle();
 
