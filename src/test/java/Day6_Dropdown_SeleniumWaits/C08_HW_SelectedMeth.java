@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.Select;
 import utilities.BaseTest;
 
 import java.util.List;
-
 public class C08_HW_SelectedMeth extends BaseTest {
    /*
     - https://demoqa.com/select-menu sitesine gidin
@@ -25,7 +24,6 @@ public class C08_HW_SelectedMeth extends BaseTest {
     @Test
     public void sMeth() {
         driver.get("https://demoqa.com/select-menu");
-
         Select select = new Select(driver.findElement(By.id("oldSelectMenu")));
         System.out.println(select.isMultiple());
 
@@ -37,7 +35,5 @@ public class C08_HW_SelectedMeth extends BaseTest {
         for (WebElement colour: color) {
             System.out.println(colour.getText());
         }
-
-
     }
 }

@@ -11,9 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-
 public class C04_BasicAuthentication {
-
     // https://the-internet.herokuapp.com/basic_auth
     WebDriver driver;
     @Before
@@ -29,13 +27,9 @@ public class C04_BasicAuthentication {
     }
     @Test
     public void basicAuth(){
-
         // https:// USERNAME:PASSWORD@URL
         driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
-
         WebElement content = driver.findElement(By.id("content"));
-
         Assert.assertTrue(content.getText().contains("Congratulations"));
-
     }
 }

@@ -10,7 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-
 public class C03_Alerts {
     /*
 driver.switchTo().alert().accept();     //ok demek
@@ -35,7 +34,6 @@ driver.switchTo().alert().sendKeys(""); //metin kutusu doldurulur
         driver.get("http://demo.guru99.com/test/delete_customer.php");
         WebElement idInput = driver.findElement(By.name("cusid"));
         idInput.sendKeys("1234");
-
         driver.findElement(By.name("submit")).click();
 
         driver.switchTo().alert().accept(); // 1. alert
@@ -47,7 +45,6 @@ driver.switchTo().alert().sendKeys(""); //metin kutusu doldurulur
         idInput1.sendKeys("123");
 
         driver.findElement(By.name("submit")).click();
-
         driver.switchTo().alert().dismiss(); // 1. alert
     }
 }

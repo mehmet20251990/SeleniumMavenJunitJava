@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import utilities.BaseTest;
-
 public class C10_HW_AlertTask extends BaseTest {
     /*
     Go to URL: http://demo.automationtesting.in/Alerts.html
@@ -22,7 +21,6 @@ public class C10_HW_AlertTask extends BaseTest {
     @Test
     public void alertTest() throws InterruptedException {
         driver.get("http://demo.automationtesting.in/Alerts.html");
-
         driver.findElement(By.xpath("//button[@class='btn btn-danger']")).click();
         Thread.sleep(2000);
 
@@ -48,7 +46,6 @@ public class C10_HW_AlertTask extends BaseTest {
         driver.switchTo().alert().sendKeys("SDET");
         driver.switchTo().alert().accept();
         System.out.println(driver.findElement(By.id("demo1")).getText());
-
         Assert.assertEquals("Hello SDET user How are you today",driver.findElement(By.id("demo1")).getText());
     }
 }

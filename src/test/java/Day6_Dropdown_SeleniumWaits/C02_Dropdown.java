@@ -9,13 +9,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-
 import java.time.Duration;
 import java.util.List;
-
 public class C02_Dropdown {
     WebDriver driver;
-
     @Before
     public void setup() {
         WebDriverManager.chromedriver().setup();
@@ -45,7 +42,6 @@ public class C02_Dropdown {
 
         // Locate edilen dropdown select objesine oluşturuldu
         Select select = new Select(drpDown);
-
         select.selectByValue("TURKEY");
     }
     @Test
@@ -57,13 +53,11 @@ public class C02_Dropdown {
         Select select = new Select(drpDown);
 
         select.selectByVisibleText("TURKEY");
-
         System.out.println(select.isMultiple());
     }
     @Test
     public void multipleSelect() {
         driver.get("https://output.jsbin.com/osebed/2");
-
         Select select = new Select(driver.findElement(By.id("fruits")));
         System.out.println(select.isMultiple());
 
@@ -77,7 +71,6 @@ public class C02_Dropdown {
         Select select = new Select(driver.findElement(By.name("country")));
 
         List <WebElement> options = select.getOptions();
-
         for (WebElement option : options){
             System.out.println(option.getText());
         }
@@ -85,7 +78,6 @@ public class C02_Dropdown {
     @Test
     public void getFirstSelectedOption() {
         driver.get("https://output.jsbin.com/osebed/2");
-
         Select select = new Select(driver.findElement(By.id("fruits")));
         System.out.println(select.isMultiple());
 
@@ -102,7 +94,6 @@ public class C02_Dropdown {
     @Test
     public void getAllSelectedOptions() {
         driver.get("https://output.jsbin.com/osebed/2");
-
         Select select = new Select(driver.findElement(By.id("fruits")));
         System.out.println(select.isMultiple());
 
@@ -111,7 +102,6 @@ public class C02_Dropdown {
         select.selectByIndex(0);
 
         List<WebElement> selectedOptions = select.getAllSelectedOptions();
-
         System.out.println(selectedOptions.get(1).getText());
 
         for (WebElement option : selectedOptions){

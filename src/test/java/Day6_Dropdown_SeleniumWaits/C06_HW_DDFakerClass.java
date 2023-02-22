@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.Select;
 import utilities.BaseTest;
 
 import java.util.List;
-
 public class C06_HW_DDFakerClass extends BaseTest {
 /*
     Go to URL: https://opensource-demo.orangehrmlive.com/
@@ -36,7 +35,6 @@ public class C06_HW_DDFakerClass extends BaseTest {
     @Test
     public void dDFakerTest(){
         driver.get("https://opensource-demo.orangehrmlive.com/");
-
         WebElement inputusername=driver.findElement(By.name("username"));
         inputusername.sendKeys("Admin");
         WebElement inputpassword=driver.findElement(By.xpath("//input[@class='oxd-input oxd-input--active'and@name='password']"));
@@ -74,7 +72,6 @@ public class C06_HW_DDFakerClass extends BaseTest {
         act.click(inputs.get(6)).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).perform();
         //Select sUnit = new Select(inputs.get(6));
         //sUnit.selectByValue("3");
-
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
         WebElement recordText = driver.findElement(By.xpath("(//span[@class='oxd-text oxd-text--span'])[1]"));
