@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import utilities.BaseTest;
 
 import java.util.List;
-
 public class C01_Task1 extends BaseTest {
     /*
    1- https://www.amazon.com/ sayfasına gidelim.
@@ -20,7 +19,6 @@ public class C01_Task1 extends BaseTest {
     @Test
     public void test(){
         driver.get("https://www.amazon.com/");
-
         WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
         searchBox.sendKeys("Samsung headphones" + Keys.ENTER);
 
@@ -29,7 +27,6 @@ public class C01_Task1 extends BaseTest {
 
         WebElement firstProduct = driver.findElement(By.xpath("(//span[@class='a-size-medium a-color-base a-text-normal'])[1]"));
         firstProduct.click();
-
         driver.navigate().back();
 
         List<WebElement> allProducts = driver.findElements(By.xpath("//span[@class='a-size-medium a-color-base a-text-normal']"));

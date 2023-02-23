@@ -5,7 +5,6 @@ import utilities.BaseTest;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-
 public class C01_ExcelMethods extends BaseTest {
     public static void main(String[] args) throws IOException {
         // Excel dosyamizin pathini aldik

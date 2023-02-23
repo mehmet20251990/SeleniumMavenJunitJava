@@ -8,7 +8,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.BaseTest;
-
 public class C02_InterviewTask extends BaseTest {
     /*
     1. "https://facebook.com" adresine gidin.
@@ -28,7 +27,6 @@ public class C02_InterviewTask extends BaseTest {
     @Test
     public void facebook() {
         driver.get("https://facebook.com");
-
         WebElement cookies = driver.findElement(By.xpath("//*[.='Temel ve isteğe bağlı çerezlere izin ver']"));
         cookies.click();
 
@@ -36,7 +34,6 @@ public class C02_InterviewTask extends BaseTest {
         newAccount.click();
 
         WebElement firstName = driver.findElement(By.xpath("//input[@name='firstname']"));
-
         Faker faker = new Faker();
 
         String email = faker.internet().emailAddress();

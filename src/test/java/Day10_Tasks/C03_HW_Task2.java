@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.BaseTest;
-
 public class C03_HW_Task2 extends BaseTest {
     /*
     ● https://the-internet.herokuapp.com/javascript_alerts adresine gidin.
@@ -19,38 +18,29 @@ public class C03_HW_Task2 extends BaseTest {
     @Test
     public void acceptAlert() {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
-
         WebElement jsAlert = driver.findElement(By.xpath("//button[@onclick='jsAlert()']"));
         jsAlert.click();
         driver.switchTo().alert().accept();
-
         Assert.assertEquals(driver.findElement(By.id("result")).getText(), "You successfully clicked an alert");
     }
-
     @Test
     public void dismissAlert() {
-
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
-
         WebElement jsConfirm = driver.findElement(By.xpath("//button[@onclick='jsConfirm()']"));
         jsConfirm.click();
 
         driver.switchTo().alert().dismiss();
-
         Assert.assertFalse(driver.findElement(By.id("result")).getText().contains("successfuly"));
     }
 
     @Test
     public void sendKeysAlert() {
-
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
-
         WebElement jsPrompt = driver.findElement(By.xpath("//button[@onclick='jsPrompt()']"));
         jsPrompt.click();
 
         driver.switchTo().alert().sendKeys("Garry");
         driver.switchTo().alert().accept();
-
         Assert.assertTrue(driver.findElement(By.id("result")).getText().contains("Garry"));
     }
 }

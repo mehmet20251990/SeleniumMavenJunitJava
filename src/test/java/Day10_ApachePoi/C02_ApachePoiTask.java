@@ -8,7 +8,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
 public class C02_ApachePoiTask extends BaseTest {
     /*
     Add the excel file on the resources folder.
@@ -25,7 +24,6 @@ public class C02_ApachePoiTask extends BaseTest {
      */
     public static void main(String[] args) throws IOException {
         String path = "src\\test\\java\\resources\\excelfile.xlsx";
-
         FileInputStream fileInputStream = new FileInputStream(path);
         Workbook workbook = WorkbookFactory.create(fileInputStream);
         Sheet sheet1 = workbook.getSheetAt(0);
@@ -56,7 +54,6 @@ public class C02_ApachePoiTask extends BaseTest {
             //System.out.println((row+1)+". satır= "+country);
             String area = sheet1.getRow(row).getCell(1).toString();
             //System.out.println("Country = " + country+" - Area = " + area);
-
             countryAreas.put(country,area);
         }
         System.out.println(countryAreas);
