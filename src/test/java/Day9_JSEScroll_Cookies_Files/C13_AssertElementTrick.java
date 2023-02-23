@@ -7,12 +7,10 @@ import org.openqa.selenium.WebElement;
 import utilities.BaseTest;
 
 import java.util.List;
-
 public class C13_AssertElementTrick extends BaseTest {
     @Test
     public void fileUpload() throws InterruptedException {
         driver.get("https://the-internet.herokuapp.com/upload");
-
         //Upload edilecek dosyamizi seciyoruz
         WebElement dosyaSec = driver.findElement(By.id("file-upload"));
         dosyaSec.sendKeys("C:\\Users\\samet\\Desktop\\fileExist.png");
@@ -25,7 +23,6 @@ public class C13_AssertElementTrick extends BaseTest {
         List<WebElement> uploadedMessageList = driver.findElements(By.tagName("h3"));
 
         Assert.assertEquals("Upload mesajı görüntülenemedi", 1, uploadedMessageList.size());
-
         WebElement uploadedMessage = uploadedMessageList.get(0);
 
         Assert.assertTrue(uploadedMessage.isDisplayed());

@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.BaseTest;
-
 public class C12_HW_UploadFile extends BaseTest {
     /*
     Go to URL: https://www.monsterindia.com/seeker/registration
@@ -17,7 +16,6 @@ public class C12_HW_UploadFile extends BaseTest {
     @Test
     public void uploadFileTest() throws InterruptedException {
         driver.get("https://www.monsterindia.com/seeker/registration");
-
         String path = "C:\\Users\\samet\\Desktop\\Mevlana.rtf";
 
         // İnput elementini almaya dikkat etmeliyiz...

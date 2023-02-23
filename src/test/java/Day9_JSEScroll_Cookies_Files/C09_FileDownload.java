@@ -10,7 +10,6 @@ import utilities.BaseTest;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
 public class C09_FileDownload extends BaseTest {
     /*
     Go to URL: https://opensource-demo.orangehrmlive.com/
@@ -24,7 +23,6 @@ public class C09_FileDownload extends BaseTest {
     @Test
     public void fileDownload() throws InterruptedException {
         driver.get("https://opensource-demo.orangehrmlive.com/");
-
         WebElement userName = driver.findElement(By.name("username"));
         userName.sendKeys("Admin");
         WebElement password = driver.findElement(By.name("password"));
@@ -34,7 +32,6 @@ public class C09_FileDownload extends BaseTest {
         pımButton.click();
 
         driver.findElement(By.xpath("//span[text()='Configuration ']")).click();
-
         driver.findElement(By.linkText("Data Import")).click();
 
         driver.findElement(By.className("download-link")).click();

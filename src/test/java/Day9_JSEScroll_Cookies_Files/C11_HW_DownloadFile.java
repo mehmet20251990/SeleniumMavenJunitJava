@@ -7,7 +7,6 @@ import utilities.BaseTest;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
 public class C11_HW_DownloadFile extends BaseTest {
     // Go to https://the-internet.herokuapp.com/download
     //  Download sample.png file
@@ -22,7 +21,6 @@ public class C11_HW_DownloadFile extends BaseTest {
 
         String dwnPath = "C:\\Users\\samet\\Downloads\\sample.png";
         Thread.sleep(3000);
-
         Assert.assertTrue("indirilen dosya bulunamadı", Files.exists(Paths.get(dwnPath)));
     }
 }
