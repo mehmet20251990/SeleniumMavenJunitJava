@@ -7,7 +7,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.BaseTest;
-
 public class C06_Task4 extends BaseTest {
     /*
     1- https://html.com/tags/iframe/ sayfasına gidelim.
@@ -15,11 +14,9 @@ public class C06_Task4 extends BaseTest {
     3- Videoyu izlemek için Play tuşuna basın.
     4- Videoyu çalıştırdığınızı test edin.
    */
-
     @Test
     public void jSTest() {
         driver.get("https://html.com/tags/iframe/");
-
         Actions actions = new Actions(driver);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
 
@@ -28,7 +25,6 @@ public class C06_Task4 extends BaseTest {
 
         WebElement play = driver.findElement(By.xpath("//button[@class='ytp-large-play-button ytp-button ytp-large-play-button-red-bg']"));
         actions.click(play).perform();
-
         Assert.assertFalse(play.isDisplayed());
     }
 }

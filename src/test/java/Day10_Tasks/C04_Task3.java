@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.Select;
 import utilities.BaseTest;
 
 import java.util.List;
-
 public class C04_Task3 extends BaseTest {
     /*
     ● https://the-internet.herokuapp.com/dropdown adresine gidin.
@@ -30,9 +29,7 @@ public class C04_Task3 extends BaseTest {
     @Test
     public void dDTest() {
         driver.get("https://the-internet.herokuapp.com/dropdown");
-
         WebElement dropDown = driver.findElement(By.id("dropdown"));
-
         Select select = new Select(dropDown);
 
         select.selectByIndex(1);

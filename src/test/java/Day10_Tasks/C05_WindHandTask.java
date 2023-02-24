@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import utilities.BaseTest;
 
 import java.util.Set;
-
 public class C05_WindHandTask extends BaseTest {
     /*
     ● https://the-internet.herokuapp.com/windows adresine gidin.
@@ -20,16 +19,13 @@ public class C05_WindHandTask extends BaseTest {
     @Test
     public void wHTest() {
         driver.get("https://the-internet.herokuapp.com/windows");
-
         Assert.assertEquals(driver.findElement(By.tagName("h3")).getText(), "Opening a new window", "Text istendiğini gibi değil.");
         Assert.assertTrue("1. sayfadaki title istenen değerden farklı.", driver.getTitle().contains("The Internet"));
 
         String firstPageHandle = driver.getWindowHandle();
-
         driver.findElement(By.linkText("Click Here")).click();
 
         Set<String> allWindowHandles = driver.getWindowHandles();
-
         String secondWindowHandle = "";
 
         for (String each : allWindowHandles) {

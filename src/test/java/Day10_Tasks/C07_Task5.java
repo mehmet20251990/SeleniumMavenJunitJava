@@ -8,7 +8,6 @@ import org.openqa.selenium.interactions.Actions;
 import utilities.BaseTest;
 
 import java.util.Set;
-
 public class C07_Task5 extends BaseTest {
     /*
     1- https://the-internet.herokuapp.com/context_menu sitesine gidelim.
@@ -21,7 +20,6 @@ public class C07_Task5 extends BaseTest {
     @Test
     public void aTest() {
         driver.get("https://the-internet.herokuapp.com/context_menu");
-
         Actions actions = new Actions(driver);
         WebElement box = driver.findElement(By.id("hot-spot"));
         actions.contextClick(box).perform();
@@ -30,7 +28,6 @@ public class C07_Task5 extends BaseTest {
         driver.switchTo().alert().accept();
 
         String firstPageHandle = driver.getWindowHandle();
-
         driver.findElement(By.linkText("Elemental Selenium")).click();
 
         Set<String> allWindowPageHandle = driver.getWindowHandles();
@@ -42,7 +39,6 @@ public class C07_Task5 extends BaseTest {
             }
         }
         driver.switchTo().window(secondPageHandle);
-
         Assert.assertEquals(driver.findElement(By.tagName("h1")).getText(), "Elemental Selenium", "İkinci sayfadaki text istenenden farklı.");
     }
 }
