@@ -9,7 +9,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
 import java.io.IOException;
-
 public class C01_Screenshots {
     @Test
     public void fullPageScreenshot() throws IOException {
@@ -17,7 +16,6 @@ public class C01_Screenshots {
         WebDriver driver = new FirefoxDriver();
 
         driver.get("https://wwww.amazon.com/");
-
         File source = ((FirefoxDriver)driver).getFullPageScreenshotAs(OutputType.FILE);
         // Sadece firefox da çalışır ve sayfanın scrolle en aşagısına kadar resmini alır...
         // test-output -> Screenshots -> screenshot.png

@@ -4,7 +4,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.BaseTest;
-
 public class C03_WebTables extends BaseTest {
     /*
     Go to URL: http://demo.guru99.com/test/web-table-element.php
@@ -40,10 +39,8 @@ public class C03_WebTables extends BaseTest {
         // For donguleri ile tum hucreleri geziyoruz
         for (int i = 1; i<=satirSayisi; i++){
             //her bir satir
-
             for (int j = 1; j<=sutunSayisi; j++){
                 // her satirin sutunu
-
                 By locator = By.xpath(".//tr["+ i +"]//td[" + j + "]");
                 WebElement tableData = table.findElement(locator);
                 System.out.print(tableData.getText() + " ");

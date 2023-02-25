@@ -8,7 +8,6 @@ import org.junit.Test;
 import utilities.BaseTest;
 
 import java.io.*;
-
 public class C02_WriteExcelExample2 extends BaseTest {
     /*
     Create an object of File class to open xlsx file.

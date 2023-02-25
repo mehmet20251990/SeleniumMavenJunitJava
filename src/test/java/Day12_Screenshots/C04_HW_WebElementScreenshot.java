@@ -10,7 +10,6 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 public class C04_HW_WebElementScreenshot extends BaseTest {
     /*
     Go to URL: https://opensource-demo.orangehrmlive.com/
@@ -23,7 +22,6 @@ Save the screenshot with format 'screenshotname_yyyy-MM-dd_hh-mm-ss.png'
     @Test
     public void wEScshot() throws IOException {
         driver.get("https://opensource-demo.orangehrmlive.com/");
-
         File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
         String date = new SimpleDateFormat("yyyy-MM-dd_hh-mm-ss").format(new Date());
