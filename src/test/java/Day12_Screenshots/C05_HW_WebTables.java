@@ -7,7 +7,6 @@ import utilities.BaseTest;
 
 import java.awt.*;
 import java.util.List;
-
 public class C05_HW_WebTables extends BaseTest {
     /*
     Go to URL: https://the-internet.herokuapp.com/tables
@@ -19,7 +18,6 @@ public class C05_HW_WebTables extends BaseTest {
     parameter 1 = row number
     parameter 2 = column number
     printData(3,4); => prints
-
     parameter 3 = table id
     printData(3,4,"table1") => prints data in 3rd row 4th Column with table id
      */
@@ -29,7 +27,6 @@ public class C05_HW_WebTables extends BaseTest {
     @Test
     public void webTables() {
         driver.get("https://the-internet.herokuapp.com/tables");
-
         WebElement table1 = driver.findElement(By.id("table1"));
         WebElement table2 = driver.findElement(By.id("table2"));
 
@@ -56,7 +53,6 @@ public class C05_HW_WebTables extends BaseTest {
         }
         System.out.println("-----------TABLE 2 --------------");
         table2Clms.forEach(x -> System.out.println(x.getText()));
-
         System.out.println("printData(3,4,\"table1\") = " + printData(3, 4, "table1"));
     }
     public String printData(int rowNumber , int columnNumber , String tableID){

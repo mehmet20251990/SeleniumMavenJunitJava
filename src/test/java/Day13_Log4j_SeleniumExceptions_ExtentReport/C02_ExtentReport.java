@@ -4,7 +4,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.BaseTestReport;
-
 public class C02_ExtentReport extends BaseTestReport {
     @Test
     public void test(){

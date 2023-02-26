@@ -7,13 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
-
 public abstract class BaseTest {
-
     // Abstract yaparak TestBase Class'ından obje oluşturulmasının önüne geçeriz.
     // TestBase Class'ı sadece extends ile inherit ederek kullanacağız. Dolayısıyla oluşturduğumuz driver variable'i
     // için protected access modifier seçiyoruz.
-
     protected WebDriver driver;
     @Before
     public void setup(){

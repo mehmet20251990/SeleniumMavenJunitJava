@@ -12,9 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
-
 public class BaseTestReport {
-
     protected WebDriver driver;
     protected ExtentReports extentReports; // raporlama işlemini gerçekleştirir
     protected ExtentHtmlReporter extentHtmlReporter; // raporu HTML olarak düzenler
